@@ -1,0 +1,1130 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, serif;
+    background-color: #f5f5f5;
+}
+
+/* Cultural Header */
+.cultural-header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.header-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.header-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Welcome Title */
+.welcome-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin: 50px 0 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Description Text */
+.description {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Key Highlights Section */
+.key-highlights {
+    padding: 40px 20px;
+    background-color: #eaf0f1;
+    text-align: center;
+}
+
+.key-highlights h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.highlight-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.highlight-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 0.5s ease-in-out forwards;
+}
+
+.highlight-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.highlight-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.highlight-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.highlight-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.highlight-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.highlight-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Category Section */
+.category-section {
+    padding: 40px 20px;
+    background-color: #eaf0f1;
+    text-align: center;
+}
+
+.category-section h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.category-container {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.category-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px; /* Fixed width */
+    height: 260px; /* Fixed height */
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category-image {
+    width: 100%;
+    height: 120px; /* Fixed height for images */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+.category-item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2em;
+        padding: 15px;
+    }
+
+    .welcome-title {
+        font-size: 2em;
+    }
+
+    .description {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+
+    .highlight-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .category-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .category-image {
+        height: auto;
+    }
+}
+
+/* Famous Foods Section */
+.famous-foods {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.famous-foods h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.food-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.food-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 0.5s ease-in-out forwards;
+}
+
+.food-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.food-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.food-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.food-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.food-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.food-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Recipe Video Section */
+.recipe-video {
+    padding: 40px 20px;
+    background-color: #eaf0f1;
+    text-align: center;
+}
+
+.recipe-video h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.food-video {
+    width: 320px;
+    height: 180px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.food-video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Cultural Header */
+.cultural-header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.header-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.header-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Welcome Title */
+.welcome-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin: 50px 0 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Description Text */
+.description {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Key Highlights Section */
+.key-highlights {
+    padding: 40px 20px;
+    background-color: #eaf0f1;
+    text-align: center;
+}
+
+.key-highlights h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.highlight-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.highlight-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 0.5s ease-in-out forwards;
+}
+
+.highlight-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.highlight-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.highlight-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.highlight-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.highlight-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.highlight-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .header-text h1 {
+        font-size: 2em;
+        padding: 15px;
+    }
+
+    .welcome-title {
+        font-size: 2em;
+    }
+
+    .description {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+
+    .highlight-item {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+}
+
+/*Dance Section Styling*/
+.dance-header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.header-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.header-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Welcome Title */
+.welcome-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin: 50px 0 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Description Text */
+.description {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Dance Forms Section */
+.dance-forms-section {
+    padding: 40px 20px;
+    background-color: #eaf0f1;
+    text-align: center;
+}
+
+.dance-forms-section h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.dance-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.dance-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 0.5s ease-in-out forwards;
+}
+
+.dance-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.dance-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.dance-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.dance-item:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.dance-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.dance-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 10px 0;
+}
+
+.dance-item p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Video Section */
+.dance-videos {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.dance-videos h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.dance-video {
+    width: 100%;
+    max-width: 480px;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/*Historic Place Section */
+.historic-header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.header-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.header-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Welcome Title */
+.welcome-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin: 50px 0 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Description Text */
+.description {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Historic Places Section */
+.historic-places-section {
+    padding: 40px 20px;
+    background-color: #eaf0f1;
+    text-align: center;
+}
+
+.historic-places-section h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.historic-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.historic-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 0.5s ease-in-out forwards;
+}
+
+.historic-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.historic-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.historic-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.historic-item:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.historic-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.historic-videos h2 {
+    margin-left: 260px;
+    margin-bottom: 150px;
+    font-size: 2.5em;
+    justify-content: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Festival Header */
+.festival-header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.header-text {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.header-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Welcome Title */
+.welcome-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin: 50px 0 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Description Text */
+.description {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #34495e;
+    text-align: justify;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+/* Festivals Section */
+.festivals-section {
+    padding: 40px 20px;
+    background-color: #eaf0f1;
+    text-align: center;
+}
+
+.festivals-section h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.festival-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.festival-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: popIn 0.5s ease-in-out forwards;
+}
+
+.festival-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.festival-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.festival-item:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.festival-item:nth-child(4) {
+    animation-delay: 0.7s;
+}
+
+.festival-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Video Section */
+.festival-videos {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.festival-videos h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.festival-video {
+    width: 100%;
+    max-width: 480px;
+    height: 270px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.festival-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
