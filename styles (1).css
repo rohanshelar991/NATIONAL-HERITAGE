@@ -559,7 +559,7 @@ body {
     }
 }
 
-/* /Dance Section Styling/ */
+/*Dance Section Styling*/
 .dance-header {
     position: relative;
     width: 100%;
@@ -877,6 +877,16 @@ body {
     margin-bottom: 15px;
 }
 
+.historic-videos h2 {
+    margin-left: 260px;
+    margin-bottom: 150px;
+    font-size: 2.5em;
+    justify-content: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    animation: slideInDown 1s ease-in-out;
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
@@ -1116,3 +1126,5 @@ body {
         transform: scale(1);
     }
 }
+
+
